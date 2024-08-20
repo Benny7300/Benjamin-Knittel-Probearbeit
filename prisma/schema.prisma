@@ -1,0 +1,13 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Visitor {
+  id    Int    @id @default(autoincrement())
+  count Int    @default(0)
+}
